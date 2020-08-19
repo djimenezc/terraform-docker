@@ -49,5 +49,8 @@ resource "aws_instance" "example" {
     Name        = "Application Server"
     Environment = "production"
     Terraform   = "true"
+    Version     = "0.1.1"
+    Component   = "nx-clickhouse"
+    Type        = "cluster-node"
   }
 }

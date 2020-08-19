@@ -9,8 +9,10 @@ COPY *.tf .
 
 #ENTRYPOINT /usr/local/bin/terraform
 #CMD ["--help"]
+RUN terraform fmt
 RUN terraform init
-RUN terraform validate && terraform fmt
+RUN terraform validate
+#RUN test
 
 ENTRYPOINT ["terraform"]
 CMD ["--help"]
