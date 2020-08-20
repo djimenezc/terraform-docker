@@ -5,7 +5,7 @@ RUN mkdir /usr/local/terraform
 
 WORKDIR /usr/local/terraform
 
-COPY *.tf .
+COPY *.tf ./
 
 #ENTRYPOINT /usr/local/bin/terraform
 #CMD ["--help"]
